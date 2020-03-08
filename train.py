@@ -1,6 +1,5 @@
-import sys, os
-sys.path.append('stylegan2')
-sys.path.append('forambulator')
+import sys
+sys.path.append('.')
 import forams.train
 
 # Restart from scratch
@@ -12,5 +11,5 @@ forams.train.train(data_dir='.',
                    metrics=[],
                    total_kimg=3000,
                    resume_from=resume_from_filename,
-                   result_dir='/storage/coccoliths'
+                   result_dir='/storage/coccoliths',
                    save_ticks=1)
